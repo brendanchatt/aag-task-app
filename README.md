@@ -4,6 +4,8 @@ The design is geared toward portait use.
 
 Let me know if you need any help setting up your Flutter environment!
 
+Supported platforms are mobile (android/ios) and macos with persistence, and web without persistence.  Windows are Linux are excluded for today since I am running a Mac.
+
 ## Functionality
 I've decided to go with implementing all the functionality with the addition of editing. 
 

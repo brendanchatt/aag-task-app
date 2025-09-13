@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app.dart';
@@ -10,5 +11,13 @@ void main() {
 
   // For example, any other top level async warmup
 
-  runApp(ProviderScope(child: AAGTaskApp()));
+  // Needed for orientation statement
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Locks orientation to portrait
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((
+    _,
+  ) {
+    runApp(ProviderScope(child: AAGTaskApp()));
+  });
 }
